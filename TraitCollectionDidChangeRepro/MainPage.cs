@@ -7,6 +7,8 @@ namespace TraitCollectionDidChangeRepro
     {
         public MainPage()
         {
+            Title = "Toggle Appearance to Throw Exception";
+
             var collectionView = new CollectionView
             {
                 ItemsSource = CreateItemSource(),

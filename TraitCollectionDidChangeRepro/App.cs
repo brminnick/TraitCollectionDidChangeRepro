@@ -1,16 +1,9 @@
-﻿using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+﻿using Xamarin.Forms;
 
 namespace TraitCollectionDidChangeRepro
 {
-    public partial class App : Xamarin.Forms.Application
+    public partial class App : Application
     {
-        public App()
-        {
-            var navigationPage = new Xamarin.Forms.NavigationPage(new MainPage());
-            navigationPage.On<iOS>().SetPrefersLargeTitles(true);
-
-            MainPage = navigationPage;
-        }
+        public App() => MainPage = new NavigationPage(new MainPage());
     }
 }
